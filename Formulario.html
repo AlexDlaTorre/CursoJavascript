@@ -1,0 +1,25 @@
+<DOCTYPE html>
+    <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="">
+        <input type = "text" id ="numero1">
+        <input type = "text" id ="numero2">
+        <input type = "button" value ="sumar" onclick = "alert( suma(10,50) );">
+    </form>
+    <script>
+        var suma = function (numero1,numero2) {
+            console.log(numero1, numero2);
+            const num1 = parseFloat(document.getElementById("numero1").value);
+            const num2 = parseFloat(document.getElementById("numero2").value);
+            console.log(this.num1, this.num2);
+            var resultado = num1 + num2;
+            return resultado;
+
+        }
+    </script>
+</body>
+    </html>

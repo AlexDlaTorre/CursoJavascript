@@ -1,0 +1,32 @@
+<DOCTYPE html>
+    <html>
+        <meta charset = "UTF-8">
+        <title>Funciones numeros</title>
+        <body>
+
+        </body>
+       
+        <script>
+
+        const numeroEvaluado = prompt("Ingresa número entero");
+        
+
+        function parImpar(numeroEvaluado){
+        
+            const convertirNumeroEntero = parseInt(numeroEvaluado);
+            console.log(convertirNumeroEntero);
+            if(convertirNumeroEntero % 2 == 0){
+
+                return "Par"
+            }else if(convertirNumeroEntero % 2 != 0 &&  !isNaN(convertirNumeroEntero)){
+                return "Primo"
+            }else{return "NaN"}
+
+            
+        }
+
+        console.log(parImpar(numeroEvaluado));
+
+        </script>
+    </html>
+</DOCTYPE>

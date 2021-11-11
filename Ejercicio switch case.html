@@ -1,0 +1,91 @@
+<DOCTYPE html>
+    <html>
+        <meta charset = "UTF-8">
+        <title>Ejercicio</title>
+        <head><strong>Tienda Poky</strong></head>
+        <br>
+        <br>
+        
+        <body>
+            <form name="formulario">
+                <input type= "text"  placeholder= "Ingresa tu producto" id= "producto">
+                <button type = "button" onClick="sub()">Comprar</button>
+                <br>
+                <input type= "radio" name="litros" id= "litros">0.5 litro
+                <input type= "radio"  name="kilos" id= "kilos">0.5 Kilo
+
+            
+            </form>
+            <script>
+                //ejercicio hacer input promt con nombre de producto, si es litro o kilo, si es kilo (1 o 1/2), si es litro 1 o 1/2
+                //if anidado if si no tiene el producto aparezca una alerta de no lo tenemos y que imprima no tego el producto concatenado
+                //productos huevos, leche, coca, jugo, papas, manzanas, platanos, tomate, detergente, agua
+
+                const ProductosStock = ["Huevo", "Leche", "Coca", "Jugo", "Papa", "Manzana", "Plátanos", "Tomate", "Detergente", "Agua"]
+                flag = false;
+            
+
+                function sub(){
+
+        
+                
+                const buscarProducto=document.getElementById("producto").value;
+                const buscarLitros=document.getElementById("litros").checked;
+                const buscarKilos=document.getElementById("kilos").checked;
+                flag = false
+                let counter = 0
+
+                if(buscarLitros==false && buscarKilos==false){
+                alert("Ingrese Cantidad");
+                return 
+                
+    
+
+               }
+
+                for(const articulo of ProductosStock){
+                    counter++;
+                
+                    //console.log(!(buscarProducto != articulo));
+                    
+
+                    if(buscarProducto == articulo){
+                        /*  if(!buscarProducto == articulo){
+                            return
+                        } */
+                        
+                    console.log("Articulo encontrado");
+                    flag = true
+
+                 }else if((!(buscarProducto != articulo) == false && counter === ProductosStock.length && flag == false) && flag == false){
+                     console.log("Articulo fuera de stock");
+                     
+                    
+
+                 }
+                }
+
+                
+
+                
+
+                console.log(buscarProducto);
+                //console.log(buscarLitros);
+                //console.log(buscarKilos);
+                
+                }
+                
+                
+
+                
+
+                //switch (ProductosStock){
+                  //  case 
+               // }
+
+
+                
+            </script>
+        </body>
+    </html>
+</DOCTYPE>

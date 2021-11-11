@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang ="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ejercicios DOM</title>
+        <style>
+            :root {
+              --yellow-color: #F7DF1E;
+              --dark-color: #222;
+            }
+
+            .card {
+            display: inline-block;
+            background-color: var(--dark-color);
+            color:var(--yellow-color);
+            }
+
+            .cards {
+            border: thin solid var(--dark-color);
+            padding: 1rem;
+            }
+
+            .card figcaption {
+            padding: 1rem;
+            }
+
+            .rotate-45 {
+            transform:rotate(45deg);
+            }
+
+            .rotate-135 {
+            transform: rotate(135deg);
+            }
+
+            .opacity-80 {
+            opacity: .8;
+            }
+
+            .sepia {
+            filter: sepia(1);
+            }
+
+            .flujoDeEventos div {
+            padding:4rem;
+            font-size:2rem;
+            text-align: center;
+            }
+
+            .uno {
+                background-color:yellow;
+            }
+
+            .dos {
+                background-color:rgb(245, 243, 115);
+            }
+
+            .tres {
+                background-color:rgb(239, 245, 184);
+            }
+
+        </style>
+        <base href="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    </head>
+    <body>
+        <h1>Web APIs</h1>
+        <h2>DOM: Document Object Model</h2>
+        <h2>BOM: Browser Object Model</h2>
+        <h2>CSSOM: CSS Object Model</h2>
+        <h2>WEB APIs</h2>
+            <ul>
+                <li>Eventos</li>
+                <li>Forms</li>
+                <li>AJAX-Fetch</li>
+                <li>History</li>
+                <li>Web storage</li>
+                <li>Geolocation</li>
+                <li>Drag & Drop</li>
+                <li>Indexed DB</li>
+                <li>Canvas</li>
+                <li>Matchmedia</li>
+                <li>etc...</li>
+            </ul>
+            <br>
+            <hr>
+            <br>
+            <h3>Manejo del DOM</h3>
+            <p id="que-es">We think we are creating the system for our own purposes.
+            We believe we are making it in our own image... 
+            But the computer is not really like us. It is a projection of a very slim
+            part of ourselves: that portion devoted to logic, order, rule, and clarity</p>
+            <nav id="menu">
+                <ul>
+                    <li><a href="" sección="" 1=""></a></li>
+                    <li><a href="" sección="" 2=""></a></li>
+                    <li><a href="" sección="" 3=""></a></li>
+                    <li><a href="" sección="" 4=""></a></li>
+                    <li><a href="" sección="" 5=""></a></li>
+                </ul>
+            </nav>
+            <input type="text" name="nombre" placeholder="Nombre">
+            <a class="link-DOM" style="background-color: rgb(0, 0, 0);color: rgb(243, 241, 235);" href="Ejercicios DOM.html" data-description="Document Object Model">DOM</a>
+            <section class="cards">
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/tech" alt="Tech">
+                <figcaption>Tech</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/animals" alt="Animals">
+                <figcaption>Animals</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/people" alt="People">
+                <figcaption>People</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/arch" alt="Arch">
+                <figcaption>Arch</figcaption>
+                </figure>
+                <figure class="card">
+                    <img src="https://placeimg.com/200/200/nature" alt="Nature">
+                <figcaption>Nature</figcaption>
+                </figure>
+            </section>
+
+        <template id="template-card">
+            <figure class="card">
+                <img>
+            <figcaption></figcaption>
+            </figure>
+        </template>
+
+        <h3>Eventos e JavaScript</h3>
+        <h4>Manejadores de Eventos</h4>
+        <!-- <button onClick= "holaMundo()">Evento con atributo HTML</button> -->
+        <button id= "eventoSemantico">Evento con manejador Semántico</button>
+        <br>
+        <br>
+        <button id= "eventoMultiple">Evento con manejador multiple</button>
+        <br>
+        <br>
+        <button id="removerEvento">Remover Evento con manejador multiple</button>
+        <br>
+        <br>
+        <br>
+        <h4>FLUJO DE EVENTOS</h4>
+        <section class= "flujoDeEventos">
+            <div class="uno">
+                1
+                <div class="dos">
+                 2
+                 <div class="tres">
+                  3
+                  <br>
+                  <a href="https://jonmircha.com/" target="_blank" rel="noopener">jonmircha.com</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3>Manejo del BOM</h3>
+        <br>
+        <br>
+        <button id= "abrirVentana">Abrir Ventana</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button id= "cerrarVentana">Cerrar Ventana</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button id= "imprimirVentana">Imprimir Ventana</button>
+        <br>
+        <br>
+        <script src="./EjerciciosDOM.js" type="module"> </script>
+    </body>
+</html>
+
